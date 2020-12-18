@@ -16,9 +16,15 @@
 
 .cards {
   display: flex;
-  margin-top: 10px;
+  margin: 10px;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  
+  font-family: 'Geostar Fill', cursive;
+}
+
+#movies {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 10px;
 
 }

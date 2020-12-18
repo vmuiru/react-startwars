@@ -1,20 +1,17 @@
 import { useState, useEffect } from 'react';
-import { getStarships, getFilms } from './services/sw-api';
-import { StarshipCard } from './components/starshipCard/StarshipCard';
+import { getStarships } from './services/sw-api';
+import StarshipCard from './components/starshipCard/StarshipCard';
 
 import './App.css';
 
 import styled  from 'styled-components';
 
 const StyledStarshipCard = styled.div`
-  display: flex;
-  justify-content: space-around;
   background-color: pink;
-  height: 25vh;
-  width: 30vh;
-  box-shadow: 3px 3px 3px 5px lightpink;
+  height: 45vh;
+  width: 50vh;
+  box-shadow: 1px 1px 1px 3px lightpink;
   color: magenta;
-  align-items: center;
 `;
 
 function App() {
@@ -26,16 +23,10 @@ function App() {
     results: []
   })
 
-  const [filmsData, setFilmsData] = useState({
-    count: 0,
-    results: []
-
-  })
+  
 
   async function getAppData() {
     const data = await getStarships();
-    const movies= await getFilms();
-    setFilmsData(movies);
     setStarshipData(data);
 
   }
@@ -60,7 +51,6 @@ function App() {
             <StarshipCard 
             name={ship.name}
             model={ship.model}
-            title={films.title}
             
             />
             </StyledStarshipCard>
