@@ -24,25 +24,23 @@ const StarshipCard = (props) => {
 
 
   return (
-    <div className='Starship'>
-       <h2>{props.name}</h2>
-       <p>{props.model}</p>
-       <div className='cards'>
-      {
+    <section className='cards'>
+       <h3 id='ship'>{props.name}</h3>&nbsp;&nbsp;&nbsp;<p id='model'>{props.model}</p>
+       <>
+       {
         filmsData.results.map(function(film) {
-          console.log(film)
           return(
-            <ul id='movies'><Films 
+            <table className='table'><Films 
             title={film.title}
             releaseDate={film.release_date}
             
             />
-            </ul>
+            </table>
           )
         })
       }
-    </div>
-  </div>
+    </>
+  </section>
 )};
 
 

@@ -12,6 +12,7 @@ const StyledStarshipCard = styled.div`
   width: 50vh;
   box-shadow: 1px 1px 1px 3px lightpink;
   color: magenta;
+  margin-bottom: 10px;
 `;
 
 function App() {

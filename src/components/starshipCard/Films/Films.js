@@ -1,9 +1,19 @@
+
+
 const Films = (props) => {
+    
     return (
     <>
-          <li>{props.title}</li>
-          <li>{props.releaseDate}</li>
+    <tr>
+        <th>Title</th>
+        <td>{props.title}</td>
+        </tr>
+        <tr>
+        <th>Release</th>
+          <td>{props.releaseDate}</td>
+          </tr>
           </>
+          
   )};
   
   
